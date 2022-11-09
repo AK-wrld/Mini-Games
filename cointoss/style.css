@@ -1,0 +1,217 @@
+body {
+    perspective: 800px;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+   
+    background-size: 400%;
+    overflow-y: hidden;
+   
+    animation: col-animation 20s linear infinite alternate;
+}
+@keyframes col-animation {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+}
+.logo {
+    width: 200px;
+margin: auto;
+margin-top: 40px;
+}
+#logoimg{
+
+    width: 200px;
+    scale: 1.5;
+
+}
+.rules {
+    width: 28%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    width: 61px;
+}
+.rules > img {
+    width: 100px;
+}
+.wrap {
+    width: 200;
+    height: 250;
+    /* margin: auto;
+    margin-top: 200; */
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    position: absolute;
+    left: 44%;
+    bottom: 0%;
+    scale: 1.5;
+    /* transform: translate(-50%, 0%); */
+}
+
+
+.front {
+    width: 200;
+    height: 250;
+    /* background-color: aqua; */
+    position: relative;
+    z-index: 2;
+}
+
+.back {
+    width: 200;
+    height: 250;
+    /* background-color: beige; */
+    position: relative;
+    bottom: 250px;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+/* .wrap:hover {
+    transform: rotateX(360deg);
+} */
+.coin {
+    width: 100px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ground {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0%;
+    height: 100px;
+
+    background-image: url("/cointoss/Images/grass2.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    overflow-x: hidden;
+
+}
+
+.tosstails {
+    animation: tosstails 5s forwards;
+
+}
+
+@keyframes tosstails {
+    0% {
+        transform: rotateX(0deg);
+        scale: 1.5;
+    }
+    10% {
+        scale: 1;
+    }
+    20% {
+        transform: rotateX(90deg);
+        bottom: 0%;
+        scale: 1;
+    }
+
+    50% {
+        transform: rotateX(1440deg);
+        bottom: 50%;
+        scale: 1;
+    }
+    80% {
+        transform: rotateX(2970deg);
+        bottom: 0%;
+        scale: 1;
+        
+    }
+    90% {
+        transform: rotateX(2880deg);
+        scale: 1;
+    }
+    100% {
+        transform: rotateX(2880deg);
+        scale: 1.5;
+        
+    }
+}
+
+.tossheads {
+    animation: tossheads 5s forwards;
+
+}
+
+@keyframes tossheads {
+    0% {
+        transform: rotateX(0deg);
+        scale: 1.5;
+    }
+    10% {
+        scale: 1;
+    }
+    20% {
+        transform: rotateX(90deg);
+        bottom: 0%;
+        scale: 1;
+    }
+
+    50% {
+        transform: rotateX(1440deg);
+        bottom: 50%;
+        scale: 1;
+    }
+
+    80% {
+        transform: rotateX(3150deg);
+        bottom: 0%;
+        scale: 1;
+    }
+    90% {
+        transform: rotateX(3060deg);
+        scale: 1;
+    }
+    100% {
+        transform: rotateX(3060deg);
+        scale: 1.5;
+    }
+}
+.buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+}
+button {
+   
+    height: 7vh;
+    width: 145px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+}
+button>a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    font-weight: 100;
+}
