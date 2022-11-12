@@ -1,5 +1,5 @@
 # Mini-Games
-Made some basic games using HTML,CSS and JS <br / >
+Made some basic games using HTML,CSS and JS 
 ## Coin-Toss
 So the first game is coin toss where you can check your luck by guessing if its heads or tails <br />
 ### How to Play? <br />
