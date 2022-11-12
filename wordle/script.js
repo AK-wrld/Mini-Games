@@ -40,7 +40,7 @@ let string = words[Math.round((words.length-1)*Math.random())];
         
     
 
-        document.onkeypress = function fun(event) {
+        document.onkeyup = function fun(event) {
             
 
             if (col == 5 && event.key == "Enter") {
@@ -72,15 +72,24 @@ let string = words[Math.round((words.length-1)*Math.random())];
                     }
                 }
                 if(isAns==true) {
-                    alert("Congrats User You guessed it correct")
+                    setTimeout(() => {
+                        alert("Congrats User You guessed it correct")
+                        
+                    }, 1000);
                 }
+                if(row == 4 && isAns==false) [
+                    setTimeout(() => {
+                        alert(`The answer was ${string}`)
+                        
+                    }, 1000)
+                ]
             
                 else {
                     row++;
                     col = 0;
                  }
             }
-            else if (col == 5 && event.key != "Enter" && event.keyCode!=32) {
+            else if (col == 5 && event.key != "Enter" && event.keyCode!=8) {
                 alert("cells are full!! Press Enter to check")
                 return
             }
@@ -92,7 +101,7 @@ let string = words[Math.round((words.length-1)*Math.random())];
                     alert("Cells in a row are not filled yet")
                     return
                 }
-                else if (event.keyCode == 32) {
+                else if (event.keyCode == 8) {
                  deleteElement(row, col)
                  if(col>0) {
 
