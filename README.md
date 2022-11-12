@@ -16,5 +16,5 @@ The next game is wordle where you have to guess a 5 letter word. But you only ge
 4. A "Grey" cell indicates that the letter is not is the word at all....so best not use it in your next upcoming guess <br />
 5. Note : Press "backspace" to remove the letter in a cell <br />
 6. You win if and only if all the cells in a row becomes "Green" <br />
-7.You lose if all the rows are filled but still all the cells in the last row are not "Green" <br />
+7. You lose if all the rows are filled but still all the cells in the last row are not "Green" <br />
 
